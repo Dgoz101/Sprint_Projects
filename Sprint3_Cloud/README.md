@@ -2,7 +2,7 @@
 
 I wanted to challenge myself with a project where I wasn't super familiar with how the software worked. It just so happens that cloud systems are not something that I know a whole lot about, and that cloud systems are becoming more and more essential to many workplaces. I chose to create a Customer Relationship Management system that used to cloud to store information to a database. I decided to stick with python for the language and use the Firebase Admin library to access the cloud provided by Firestore. This project contains a GUI to make tracking, updating, adding, or deleting customer information more accessible and easier to work with. Being new with cloud systems and how they are integrated, there was a lot of bumps in the road where I had to spend time researching what was wrong and why. This provided quite a fun challenge and ultimately, I am quite happy with how it turned out.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/To1Trxmv3yA?si=sl-sDW3DUFHAiFUI)
 
 # Cloud Database
 
