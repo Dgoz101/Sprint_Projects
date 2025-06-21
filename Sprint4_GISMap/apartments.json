@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Colonial Heights Townhouses",
+    "address": "251 E 4th St, Rexburg, ID 83440",
+    "price": 900,
+    "parking": true,
+    "p_spots": 40,
+    "contact": "208-356-6752"
+  },
+  {
+    "name": "Crestwood House",
+    "address": "235 S 1st E St, Rexburg, ID 83440",
+    "price": 949,
+    "parking": true,
+    "p_spots": 10,
+    "contact": "208-274-3828"
+  },
+  {
+    "name": "Riviera Apartments",
+    "address": "245 S 1st E St, Rexburg, ID 83440",
+    "price": 949,
+    "parking": 995,
+    "p_spots": 38,
+    "contact": "208-360-6790"
+  },
+  {
+    "name": "Alpine Chalet",
+    "address": "460 S 2nd W St, Rexburg, ID 83440",
+    "price": 949,
+    "parking": true,
+    "p_spots": 111,
+    "contact": "208-356-9282"
+  },
+  {
+    "name": "Cottonwood",
+    "address": "42 S 1st W St, Rexburg, ID 83440",
+    "price": 1050,
+    "parking": true,
+    "p_spots": 80,
+    "contact": "208-356-9576"
+  },
+  {
+    "name": "Blue Door",
+    "address": "123 Princeton Ct, Rexburg, ID 83440",
+    "price": 1050,
+    "parking": true,
+    "p_spots": 25,
+    "contact": "(208)356-3001"
+  },
+  {
+    "name": "Red Door",
+    "address": "135 S 1st E St, Rexburg, ID 83440",
+    "price": 1065,
+    "parking": true,
+    "p_spots": 25,
+    "contact": "208-356-3001"
+  },
+  {
+    "name": "Briarwood Apartments",
+    "address": "165 E 2nd S St, Rexburg, ID 83440",
+    "price": 1070,
+    "parking": true,
+    "p_spots": 50,
+    "contact": "208-356-3001"
+  },
+  {
+    "name": "Clarke Apartments",
+    "address": "156 S Center St, Rexburg, ID 83440",
+    "price": 1075,
+    "parking": true,
+    "p_spots": 36,
+    "contact": "208-356-6660"
+  },
+  {
+    "name": "Avonlea",
+    "address": "175 W 3rd S St, Rexburg, ID 83440",
+    "price": 1090,
+    "parking": true,
+    "p_spots": 27,
+    "contact": "208-359-0920"
+  },
+  {
+    "name": "Delta Phi Apartments",
+    "address": "139 Viking Dr, Rexburg, ID 83440",
+    "price": 1095,
+    "parking": true,
+    "p_spots": 44,
+    "contact": "208-359-8015"
+  },
+  {
+    "name": "Arcadia Apartments",
+    "address": "138 W 4th S St, Rexburg, ID 83440",
+    "price": 1095,
+    "parking": true,
+    "p_spots": 30,
+    "contact": "208-881-2935"
+  },
+  {
+    "name": "Allen's Sunrise Village",
+    "address": "48 W 2nd S St, Rexburg, ID 83440",
+    "price": 1095,
+    "parking": false,
+    "p_spots": 0,
+    "contact": "208-356-3995"
+  },
+  {
+    "name": "Alldredge House",
+    "address": "243 S 1st E St, Rexburg, ID 83440",
+    "price": 1095,
+    "parking": true,
+    "p_spots": 8,
+    "contact": "208-794-0652"
+  },
+  {
+    "name": "Georgetown Apartments",
+    "address": "236 W 3rd S St, Rexburg, ID 83440",
+    "price": 1099,
+    "parking": true,
+    "p_spots": 51,
+    "contact": "208-359-3191"
+  },
+  {
+    "name": "Bountiful Place",
+    "address": "345 W 5th S St, Rexburg, ID 83440",
+    "price": 1125,
+    "parking": true,
+    "p_spots": 85,
+    "contact": "208-351-7080"
+  },
+  {
+    "name": "Greenbrier",
+    "address": "129 Princeton Ct, Rexburg, ID 83440",
+    "price": 1135,
+    "parking": true,
+    "p_spots": 40,
+    "contact": "208-356-3001"
+  },
+  {
+    "name": "Rockland Apartments",
+    "address": "235 W 4th S St, Rexburg, ID 83440",
+    "price": 1149,
+    "parking": true,
+    "p_spots": 150,
+    "contact": "208-356-0923"
+  },
+  {
+    "name": "Bunkhouse",
+    "address": "156 W 4th S St, Rexburg, ID 83440",
+    "price": 1150,
+    "parking": true,
+    "p_spots": 175,
+    "contact": "208-356-7419"
+  },
+  {
+    "name": "The Pines",
+    "address": "140 W 2nd S St, Rexburg, ID 83440",
+    "price": 1150,
+    "parking": true,
+    "p_spots": 169,
+    "contact": "208-356-5605"
+  }
+]

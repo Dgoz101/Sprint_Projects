@@ -1,0 +1,75 @@
+<!--
+  index.html
+  Main HTML page for the Rexburg Student Housing Map application.
+  - Loads the ArcGIS CSS and JavaScript API.
+  - Defines a full-screen map container and a filter UI panel.
+  - Inclusions: js/config.js (API key), ArcGIS API, and js/app.js (map logic).
+
+  apartments.json
+  Contains an array of student housing apartments for Rexburg, ID.
+  Each object includes:
+  - name:        The name of the complex
+  - address:     Full mailing address used for geocoding
+  - price:       Semesterly rent (number)
+  - parking:     Boolean indicating on-site parking availability
+  - p_spots:     Number of parking spots
+  - contact:     Contact phone number
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Housing Map with Geocoding</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css"/>
+
+  <style>
+    html, body, #viewDiv {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #filterWidget {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 8px 12px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 99;
+      font-family: sans-serif;
+    }
+    #filterWidget h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    #filterWidget label {
+      font-size: 14px;
+      display: block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+
+  <div id="filterWidget" class="esri-widget esri-widget--panel">
+    <h4>Filter Apartments</h4>
+    <label>
+      Max Price: $<span id="priceValue">1200</span><br>
+      <input type="range" id="priceSlider" min="300" max="2000" value="1200">
+    </label>
+    <label>
+      <input type="checkbox" id="parkingCheckbox" checked>
+      On-site Parking Only
+    </label>
+  </div>
+
+<script src="js/config.js"></script>
+<script src="https://js.arcgis.com/4.26/"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
