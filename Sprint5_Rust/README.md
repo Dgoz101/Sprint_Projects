@@ -18,7 +18,7 @@ I learned a lot from this project that helped me to understand Rust’s ownershi
 serialization techniques. It was nice to create a project that I see a lot of people in my life using and knowing that I can create something that
 can be used all around the world one day.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/1FHVqThJhm4?si=b05AwZyGGXXgxoNQ)
 
 # Development Environment
 
