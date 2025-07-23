@@ -17,7 +17,7 @@ python manage.py runserver   # start Django's dev server
 
 Then open **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** in your browser.
 
-[Software Demo Video]()
+[Software Demo Video](https://www.youtube.com/watch?v=pOp8bcw62KM)
 
 ---
 
