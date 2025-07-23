@@ -1,0 +1,50 @@
+<!-- recipes/templates/recipes/recipe_form.html -->
+{% extends 'recipes/base.html' %}
+{% block title %}Add Recipe{% endblock %}
+{% block content %}
+<h2>Add a Recipe</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Recipe Info</legend>
+        {{ form.as_p }}
+    </fieldset>
+
+    <fieldset>
+        <legend>Ingredients</legend>
+        {{ ing_set.management_form }}
+        <div id="ing-forms">
+            {% for f in ing_set %}
+                <div class="form-inline">
+                    {{ f.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Hidden template -->
+        <div id="empty-ing-form" style="display:none;">
+            {{ ing_empty.as_p }}
+        </div>
+        <button type="button" id="add-ing" class="btn-small">+ Add ingredient</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Steps</legend>
+        {{ step_set.management_form }}
+        <div id="step-forms">
+            {% for f in step_set %}
+                <div class="form-inline">
+                    {{ f.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <!-- Hidden template -->
+        <div id="empty-step-form" style="display:none;">
+            {{ step_empty.as_p }}
+        </div>
+        <button type="button" id="add-step" class="btn-small">+ Add step</button>
+    </fieldset>
+
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

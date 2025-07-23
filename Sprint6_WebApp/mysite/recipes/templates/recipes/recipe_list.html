@@ -1,0 +1,20 @@
+<!-- recipes/templates/recipes/recipe_list.html -->
+{% extends 'recipes/base.html' %}
+{% block title %}All Recipes{% endblock %}
+{% block content %}
+<h2 class="fade-up">All Recipes</h2>
+
+<div class="recipe-grid">
+    {% for r in recipes %}
+        <a class="recipe-card fade-up" href="{% url 'recipe_detail' r.pk %}">
+            {% if r.thumbnail %}
+                <img src="{{ r.thumbnail.url }}" alt="{{ r.title }}">
+            {% endif %}
+            <h3>{{ r.title }}</h3>
+            <p>Avg Rating: {{ r.rating_avg|floatformat:1 }}/5</p>
+        </a>
+    {% empty %}
+        <p class="fade-up">No recipes yet. <a href="{% url 'recipe_create' %}">Add one!</a></p>
+    {% endfor %}
+</div>
+{% endblock %}

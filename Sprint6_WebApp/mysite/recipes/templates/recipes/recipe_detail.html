@@ -1,0 +1,77 @@
+<!-- recipes/templates/recipes/recipe_detail.html -->
+{% extends 'recipes/base.html' %}
+{% block title %}{{ recipe.title }}{% endblock %}
+{% block content %}
+<article class="recipe-detail fade-up">
+    <h2>{{ recipe.title }}</h2>
+    {% if recipe.thumbnail %}
+        <img class="detail-thumb" src="{{ recipe.thumbnail.url }}" alt="{{ recipe.title }}">
+    {% endif %}
+    <p>{{ recipe.description }}</p>
+
+    <section class="fade-up">
+        <h3>Ingredients</h3>
+        <ul>
+            {% for i in ingredients %}
+                <li>{{ i.amount }} - {{ i.name }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="fade-up">
+        <h3>Steps</h3>
+        <ol>
+            {% for s in steps %}
+                <li>{{ s.text }}</li>
+            {% endfor %}
+        </ol>
+    </section>
+
+    <section class="rating fade-up">
+        <h3>Rating (avg: {{ recipe.rating_avg|floatformat:1 }}/5)</h3>
+        <form id="ratingForm" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="rating">
+            <input type="hidden" id="ratingValue" name="rating" value="">
+            <div class="star-widget">
+                {% for n in "12345" %}
+                    <span class="star {% if recipe.rating_avg|floatformat:0 >= forloop.counter %}filled{% endif %}"
+                          data-value="{{ forloop.counter }}">★</span>
+                {% endfor %}
+            </div>
+            <button type="submit">Rate</button>
+        </form>
+    </section>
+
+    <section class="comments fade-up">
+        <h3>Comments</h3>
+        <ul>
+            {% for c in comments %}
+                <li>
+                    <strong>{{ c.author }}</strong> ({{ c.created_at|date:"M d, Y H:i" }}):<br>
+                    {{ c.text }}
+                </li>
+            {% empty %}
+                <li>No comments yet.</li>
+            {% endfor %}
+        </ul>
+
+        <h4>Add a comment</h4>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="comment">
+            <p>
+                <label>Name:<br>
+                    <input type="text" name="author">
+                </label>
+            </p>
+            <p>
+                <label>Comment:<br>
+                    <textarea name="text" rows="3"></textarea>
+                </label>
+            </p>
+            <button type="submit">Submit Comment</button>
+        </form>
+    </section>
+</article>
+{% endblock %}

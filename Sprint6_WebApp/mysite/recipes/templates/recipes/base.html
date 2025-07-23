@@ -1,0 +1,42 @@
+<!-- recipes/templates/recipes/base.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Recipes{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'recipes/styles.css' %}">
+</head>
+<body>
+<header class="site-header">
+    <h1 class="logo"><a href="{% url 'recipe_list' %}">Recipe Collection</a></h1>
+
+    <!-- Hamburger -->
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav">
+        <a href="{% url 'recipe_list' %}">Home</a>
+        <a href="{% url 'recipe_create' %}">Add Recipe</a>
+
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+    </nav>
+</header>
+
+<main id="page" class="page">
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>&copy; {{ now|date:"Y" }} Recipe Collection</p>
+</footer>
+
+<script src="{% static 'recipes/app.js' %}"></script>
+</body>
+</html>
